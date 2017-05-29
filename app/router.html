@@ -1,0 +1,47 @@
+
+
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    
+      <div class="nav-collapse">
+        <ul class="nav">
+
+
+            <ul class="nav navbar-nav">
+                  <li [class.active]="router.isRouteActive(router.generate(['/Home']))"><a [routerLink]="['./Home']">Home <span class="sr-only">(current)</span></a></li>
+                  <li [class.active]="router.isRouteActive(router.generate(['/Login']))"><a [routerLink]="['./Login']">Login</a></li>
+                  <li [class.active]="router.isRouteActive(router.generate(['/Register']))"><a [routerLink]="['./Register']">Register</a></li>
+                  <li [class.active]="router.isRouteActive(router.generate(['/FindGun']))"><a [routerLink]="['./FindGun']">FindGun</a></li>
+                  <li [class.active]="router.isRouteActive(router.generate(['/AddGun']))"><a [routerLink]="['./AddGun']">AddGun</a></li>
+
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">More<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#gallery">Products</a></li>
+                      <li><a href="#section-3">Contact</a></li>
+
+
+                    </ul>
+                  </li>
+            </ul>
+
+
+        </ul>
+        <!--this is menu the right side for login etc-->
+            <ul class="nav pull-right">
+          <li class="divider-vertical"></li>
+
+        </ul>
+      </div><!-- /.nav-collapse -->
+    </div>
+  </div><!-- /navbar-inner -->
+</div>
+
+<router-outlet></router-outlet>

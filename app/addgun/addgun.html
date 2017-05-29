@@ -1,0 +1,10 @@
+
+<div id="addgun" class="active">
+				<form role="form" class="addgun-form" [ngFormModel]="registerForm">
+					<input type="text" class="input" ngControl='id' required autocomplete="off" placeholder="Gun's id"/>
+					<input type="text" class="input" ngControl='name' required autocomplete="off" placeholder="Gun's name"/>
+						
+					<button (click)="onAddGun()" class="button button-block">Submit</button>
+					<!-- button type="submit" name="submit" class="btn" -->
+				</form>
+			</div>

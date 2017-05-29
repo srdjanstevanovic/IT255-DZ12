@@ -1,0 +1,20 @@
+<form class="navbar-form" role="search">
+
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search guns by name:" [(ngModel)]="name">
+    </div>
+</form>
+
+
+
+<div class="col-lg-12">
+    <h3>Guns</h3>
+    <div class= "guns" *ngFor="#gun of guns| SearchPipe: name" >
+        <p>Gun ID:</p> {{gun.id}}
+        
+        <p>Gun's name:</p> {{gun.name}}
+
+</div>        
+
+
+</div>  
