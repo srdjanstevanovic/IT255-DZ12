@@ -42,6 +42,7 @@ System.register(['angular2/core', 'angular2/common', 'angular2/http', 'rxjs/Rx',
                     var data = "&id=" + this.registerForm.value.id + "&name=" + this.registerForm.value.name;
                     var headers = new http_1.Headers();
                     headers.append('Content-Type', 'application/x-www-form-urlencoded');
+                    headers.append("token", localStorage.getItem("token"));
                     this.http.post('http://localhost/php/addgun.php', data, { headers: headers })
                         .map(function (res) { return res; })
                         .subscribe(function (data) { return _this.postResponse = data; }, function (err) { return alert(JSON.stringify(err)); }, function () {

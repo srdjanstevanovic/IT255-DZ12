@@ -28,6 +28,7 @@ export class AddGunComponent {
 	var data = "&id="+this.registerForm.value.id+"&name="+this.registerForm.value.name;
 	var headers = new Headers();
 	headers.append('Content-Type', 'application/x-www-form-urlencoded');
+	headers.append("token",localStorage.getItem("token"));
 	this.http.post('http://localhost/php/addgun.php',data, {headers:headers})
     .map(res => res)
     .subscribe( data => this.postResponse = data,
